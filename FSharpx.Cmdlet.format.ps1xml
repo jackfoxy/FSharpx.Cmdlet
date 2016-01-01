@@ -1,0 +1,23 @@
+<!-- Formatting file for FSUtils module.-->
+<Configuration>
+    <ViewDefinitions>
+        <!-- Make the output of Search-File look like findstr output -->
+        <View>
+            <Name>FSUtils.LineMatch</Name>
+            <ViewSelectedBy>
+                <TypeName>FSUtils.LineMatch</TypeName>
+            </ViewSelectedBy>
+            <CustomControl>
+                <CustomEntries>
+                    <CustomEntry>
+                       <CustomItem>
+                            <ExpressionBinding>
+                              <ScriptBlock>Write-Host "$($_.RelativePath) $($_.LineNumber):" -Fore Yellow -NoNew; Write-Host $_.Line -NoNew</ScriptBlock>
+                            </ExpressionBinding>
+                        </CustomItem>
+                    </CustomEntry>
+                </CustomEntries>
+            </CustomControl>
+        </View>
+   </ViewDefinitions>
+</Configuration>
