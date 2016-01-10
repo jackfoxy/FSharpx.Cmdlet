@@ -1,9 +1,32 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpx.Cmdlet", "FSharpx.Cmdlet.fsproj", "{822FDC11-E547-4783-BD9F-F8922C257293}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "posh-module", "posh-module", "{0D79DC61-DD98-4AA9-8577-E2080BEE9678}"
+	ProjectSection(SolutionItems) = preProject
+		posh-module\FSharpx.Cmdlet.dll-Help.xml = posh-module\FSharpx.Cmdlet.dll-Help.xml
+		posh-module\FSharpx.Cmdlet.format.ps1xml = posh-module\FSharpx.Cmdlet.format.ps1xml
+		posh-module\FSharpx.Cmdlet.psd1 = posh-module\FSharpx.Cmdlet.psd1
+		posh-module\FSharpx.Cmdlet.psm1 = posh-module\FSharpx.Cmdlet.psm1
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpx.Cmdlet", "src\FSharpx.Cmdlet.fsproj", "{822FDC11-E547-4783-BD9F-F8922C257293}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{8D5AE838-B4CB-4ED2-A53C-30E0C6AC2F49}"
+	ProjectSection(SolutionItems) = preProject
+		tools\chocolateyInstall.ps1 = tools\chocolateyInstall.ps1
+		tools\Install-PSModulePath.ps1 = tools\Install-PSModulePath.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{87E4BDC3-9815-48FF-90C9-717D5AC9399E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		FSharpx.Cmdlet.nuspec = FSharpx.Cmdlet.nuspec
+		paket.dependencies = paket.dependencies
+		paket.lock = paket.lock
+		readme.md = readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
