@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <helpItems xmlns="http://msh" schema="maml">
-  <command:command
-  xmlns:maml=http://schemas.microsoft.com/maml/2004/10
-  xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" 
-  xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
-    <command:details> 
+  <command:command 
+    xmlns:maml="http://schemas.microsoft.com/maml/2004/10"  
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"  
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
       <command:name>Search-File</command:name>
       <maml:description>
         <maml:para>Cmdlet description…</maml:para>
       </maml:description>
     </command:details>
-  <!--unseccessful getting this to work-->
+  </command:command>
 </helpItems>
 

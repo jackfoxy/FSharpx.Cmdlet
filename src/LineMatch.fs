@@ -8,7 +8,7 @@ namespace FSharpx.Cmdlet
 open System.Text.RegularExpressions 
  
 // holds info about lines of files matching the provided pattern 
-type LineMatch(filePath : string, currentPath : string, lineNumber : int, line : string, m : Match) =  
+type LineMatch (filePath:string, currentPath:string, lineNumber:int, line:string, m:Match) =  
     member val Path = filePath 
     member val RelativePath = filePath.Remove(0, currentPath.Length + 1) 
     member val LineNumber = lineNumber 
@@ -17,13 +17,11 @@ type LineMatch(filePath : string, currentPath : string, lineNumber : int, line :
  
     // .[] access to match groups 
     member this.Item  
-        with get(i : int) =  
+        with get (i:int) =  
             match m.Groups.[i] with 
-            | g when g.Success -> g.Value 
-            | _ -> null 
+            | g when g.Success -> g.Value | _ -> null 
  
     member this.Item 
-        with get(i : string) =  
+        with get (i:string) =  
             match m.Groups.[i] with 
-            | g when g.Success -> g.Value 
-            | _ -> null
+            | g when g.Success -> g.Value | _ -> null

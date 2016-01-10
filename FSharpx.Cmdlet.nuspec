@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>fsharpx.cmdlet</id>
+    <title>FSharpx.Cmdlet</title>
+    <version>0.0.1</version>
+    <authors>Jack Foxy, Jared Hester</authors>
+    <owners>Jack Foxy</owners>
+    <summary>Posh Search-File Cmdlet Implemented in F#</summary>
+    <description>Posh Search-File Cmdlet Implemented in F#</description>
+    <projectUrl>https://github.com/jackfoxy/FSharpx.Cmdlet</projectUrl>
+    <tags>F# Posh Cmdlet Search Grep</tags>
+    <copyright></copyright>
+    <!--licenseUrl>__REPLACE__</licenseUrl-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Important note about https://cdn.rawgit.com: Files are cached permanently after the first request. Use commit URLs when updating the icon. -->
+    <!--<iconUrl>http://cdn.rawgit.com/__CHOCO_PKG_MAINTAINER_REPO__/master/icons/__NAME__.png</iconUrl>-->
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
