@@ -44,26 +44,26 @@ type SearchFileCmdlet() =
     inherit PSCmdlet() 
  
     /// Regex pattern used in the search. 
-    [<Parameter(Mandatory = true, Position = 0, HelpMessage = "regular expression which will be used for matching")>] 
+    [<Parameter(Mandatory = true, Position = 0, HelpMessage = "Regular expression used for matching.")>] 
     [<ValidateNotNullOrEmpty>] 
     member val Pattern : string = null with get, set 
      
     /// Array of filename wildcards. 
-    [<Parameter(Position = 1, HelpMessage = "returns files in current directory matching one or more of the wildcards (not regular expressions); e.g. '*.fs','*.fsx'; default '*'")>] 
+    [<Parameter(Position = 1, HelpMessage = "Returns files in current directory matching one or more of the wildcards (not regular expressions); e.g. '*.fs','*.fsx'; default '*'")>] 
     [<ValidateNotNull>] 
     member val Include = [|"*"|] with get,set 
 
     /// Array of filename excludes. 
-    [<Parameter(HelpMessage = "excludes files matching one or more of the regular expressions (not wild cards); e.g. '.pdb','.xml'")>] 
+    [<Parameter(HelpMessage = "Excludes files matching one or more of the regular expressions (not wild cards); e.g. -exclude '.pdb','.xml'")>] 
     [<ValidateNotNull>] 
     member val Exclude = [||] with get,set 
      
     /// Whether or not to recurse from the current directory. 
-    [<Parameter(HelpMessage = "recursively search sub-directories")>] 
+    [<Parameter(HelpMessage = "Recursively search sub-directories.")>] 
     member val Recurse : SwitchParameter = SwitchParameter(false) with get, set 
 
     /// Whether or not to include executable files exe and dll. 
-    [<Parameter(HelpMessage = "include executable files '*.exe','*.dll' in search")>] 
+    [<Parameter(HelpMessage = "Include executable files '*.exe','*.dll' in search.")>] 
     member val IncludeExecute : SwitchParameter = SwitchParameter(false) with get, set 
  
     /// Endcoding to use when reading the files. 
@@ -71,11 +71,11 @@ type SearchFileCmdlet() =
     member val Encoding = Encoding.ASCII with get, set 
      
     /// Toggle for case-sensitive search. 
-    [<Parameter(HelpMessage = "makes search case sensitive")>] 
+    [<Parameter(HelpMessage = "Makes search case sensitive.")>] 
     member val CaseSensitive : SwitchParameter = SwitchParameter(false) with get, set 
  
     /// Do not use regex, just do a verbatim string search. 
-    [<Parameter(HelpMessage = "do not use regex, just do a verbatim string search")>] 
+    [<Parameter(HelpMessage = "Do not use regex, just do a verbatim string search.")>] 
     member val SimpleMatch : SwitchParameter = SwitchParameter(false) with get, set 
      
     /// Called once per object coming from the pipeline. 
